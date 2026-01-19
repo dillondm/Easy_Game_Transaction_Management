@@ -1,0 +1,127 @@
+.app-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+
+.app-header {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 0;
+}
+
+
+.alert-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.client-item {
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.client-item:hover {
+  border-left-color: #667eea;
+  background-color: #f8f9fa;
+}
+
+.client-item.active {
+  background-color: #667eea !important;
+  color: white;
+  border-left-color: #764ba2;
+}
+
+.client-item.active .balance-badge {
+  background-color: white !important;
+  color: #667eea !important;
+}
+
+
+.transaction-row {
+  transition: background-color 0.3s ease;
+}
+
+.transaction-row:hover {
+  background-color: #f0f8ff;
+}
+
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+
+.balance-badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeIn 0.5s ease;
+}
+
+
+@media (max-width: 768px) {
+  .app-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+}
