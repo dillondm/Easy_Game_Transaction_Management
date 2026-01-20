@@ -1,4 +1,4 @@
-﻿// Controllers/ClientsController.cs
+
 using TransactionManagementAPI.Data;
 using TransactionManagementAPI.Models.DTOs;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +17,7 @@ namespace TransactionManagementAPI.Controllers
             _repository = repository;
         }
 
-        // GET: api/clients
+       
         [HttpGet]
         public async Task<IActionResult> GetAllClients()
         {
@@ -40,7 +40,7 @@ namespace TransactionManagementAPI.Controllers
             }
         }
 
-        // GET: api/clients/5
+  
         [HttpGet("{id}")]
         public async Task<IActionResult> GetClient(int id)
         {
@@ -72,7 +72,7 @@ namespace TransactionManagementAPI.Controllers
             }
         }
 
-        // GET: api/clients/search?term=john
+     
         [HttpGet("search")]
         public async Task<IActionResult> SearchClients([FromQuery] string term)
         {
