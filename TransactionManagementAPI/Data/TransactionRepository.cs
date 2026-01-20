@@ -57,7 +57,7 @@ namespace TransactionManagementAPI.Data
         {
             using var connection = CreateConnection();
 
-            // Use stored procedure which returns updated client
+         
             var result = await connection.QueryFirstOrDefaultAsync<Client>(
                 "sp_AddTransaction",
                 new
