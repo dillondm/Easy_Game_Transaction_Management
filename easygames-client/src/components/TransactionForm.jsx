@@ -26,7 +26,7 @@ const TransactionForm = ({ client, transactionTypes, onAddTransaction }) => {
 
     onAddTransaction(transactionData);
 
-    // Reset form
+    
     setFormData({
       transactionTypeID: '',
       transactionAmount: '',
