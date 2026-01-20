@@ -59,11 +59,11 @@ function App() {
       if (response.success) {
         showAlert('Transaction added successfully!', 'success');
         
-        // Update client balance
+     
         const updatedClient = response.data;
         setSelectedClient(updatedClient);
         
-        // Update client in list
+   
         setClients(prevClients =>
           prevClients.map(c =>
             c.clientID === updatedClient.clientID ? updatedClient : c
@@ -75,7 +75,7 @@ function App() {
           )
         );
         
-        // Reload transactions
+        
         const transactionsData = await apiService.getClientTransactions(updatedClient.clientID);
         setTransactions(transactionsData);
       }
