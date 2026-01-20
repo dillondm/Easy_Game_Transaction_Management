@@ -15,7 +15,6 @@ namespace EasyGamesAPI.Controllers
             _repository = repository;
         }
 
-        // GET: api/transactions/types
         [HttpGet("types")]
         public async Task<IActionResult> GetTransactionTypes()
         {
@@ -38,7 +37,7 @@ namespace EasyGamesAPI.Controllers
             }
         }
 
-        // GET: api/transactions/client/5
+
         [HttpGet("client/{clientId}")]
         public async Task<IActionResult> GetClientTransactions(int clientId)
         {
@@ -61,7 +60,6 @@ namespace EasyGamesAPI.Controllers
             }
         }
 
-        // POST: api/transactions
         [HttpPost]
         public async Task<IActionResult> AddTransaction([FromBody] AddTransactionDto dto)
         {
@@ -104,7 +102,7 @@ namespace EasyGamesAPI.Controllers
             }
         }
 
-        // PUT: api/transactions/comment
+      
         [HttpPut("comment")]
         public async Task<IActionResult> UpdateComment([FromBody] UpdateCommentDto dto)
         {
